@@ -27,9 +27,12 @@ body {
     -moz-border-radius: 30px;
     border-radius: 30px;
     border: 20px solid whitesmoke;
-    background-image: url(./bgimg.png);
-    background-repeat: no-repeat;
-    background-position: center;
+    background: rgb(192,192,192);
+    background: -moz-radial-gradient(circle, rgba(192,192,192,0.4500175070028011) 41%, rgba(171,145,170,0.5508578431372548) 100%);
+    background: -webkit-radial-gradient(circle, rgba(192,192,192,0.4500175070028011) 41%, rgba(171,145,170,0.5508578431372548) 100%);
+    background: radial-gradient(circle, rgba(192,192,192,0.4500175070028011) 41%, rgba(171,145,170,0.5508578431372548) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c0c0c0",endColorstr="#ab91aa",GradientType=1);
+
 }
 #hours,
 #minutes {
@@ -43,7 +46,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: whitesmoke;
+    color: rgba(255, 255, 255, 0.864);
 }
 #separator {
     flex-grow: 1;

@@ -1,6 +1,8 @@
 @import url('https://fonts.cdnfonts.com/css/alarm-clock');
 
-*, ::before, ::after {
+*, 
+::before, 
+::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -9,6 +11,8 @@ body {
     /* border: 4px solid pink; debug */
     min-width: 100vw;
     min-height: 100vh;
+    font-size: 16px;
+    font-family: 'alarm clock', sans-serif;
     display: flex;
     align-items: center; /* center child element vertically */
     justify-content: center; /* center child element horizontally */
@@ -22,36 +26,31 @@ body {
 #clock {
     width: 25em;
     height: 12.5em;
-    min-width: 6.25em;
+    min-width: 6em;
     min-height: 3.125em;
-    font-size: 16px;
     display: flex;
     flex-direction: row;
     padding: 1.563em;
+    /* Border */
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     border-radius: 30px;
     border: 20px solid whitesmoke;
-
+    /* box shadow */
     box-shadow: 2px 7px 11px 2px rgba(109,104,110,0.58);
     -webkit-box-shadow: 2px 7px 11px 2px rgba(109,104,110,0.58);
     -moz-box-shadow: 2px 7px 11px 2px rgba(109,104,110,0.58);
-
+    /* Gradient bg */
     background: rgb(192,192,192);
     background: -moz-radial-gradient(circle, rgba(192,192,192,0.4500175070028011) 41%, rgba(171,145,170,0.5508578431372548) 100%);
     background: -webkit-radial-gradient(circle, rgba(192,192,192,0.4500175070028011) 41%, rgba(171,145,170,0.5508578431372548) 100%);
     background: radial-gradient(circle, rgba(192,192,192,0.4500175070028011) 41%, rgba(171,145,170,0.5508578431372548) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c0c0c0",endColorstr="#ab91aa",GradientType=1);
-
 }
 #hours,
 #minutes {
     flex-grow: 2;
-}
-#hours,
-#minutes {
     font-size: 5.5em;
-    font-family: 'alarm clock', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,16 +58,11 @@ body {
 }
 #separator,
 #ampm{
-    
-    font-family: 'alarm clock', sans-serif;
+    flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     color: rgba(255, 255, 255, 0.864);
-}
-#separator,
-#ampm {
-    flex-grow: 1;
 }
 #separator{
     font-size: 5em;
@@ -84,7 +78,15 @@ body {
 
 
 @media screen and (max-width: 400px) {
-    /* Your CSS rules here */
+    #hours,
+    #minutes,
+    #separator {
+        font-size: 4em;
+        padding-left: 0px;
+    }
+    #ampm{
+        font-size: 1em;
+    }
   }
 
  

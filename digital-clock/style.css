@@ -82,7 +82,6 @@ body {
     #minutes,
     #separator {
         font-size: 4em;
-        padding-left: 0px;
     }
     #ampm{
         font-size: 1em;

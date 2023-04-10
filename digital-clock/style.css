@@ -13,6 +13,11 @@ body {
     align-items: center; /* center child element vertically */
     justify-content: center; /* center child element horizontally */
     font-size: 1em;
+    background: rgb(220,204,222);
+    background: -moz-linear-gradient(199deg, rgba(220,204,222,0.5508578431372548) 0%, rgba(242,242,242,0.4500175070028011) 76%);
+    background: -webkit-linear-gradient(199deg, rgba(220,204,222,0.5508578431372548) 0%, rgba(242,242,242,0.4500175070028011) 76%);
+    background: linear-gradient(199deg, rgba(220,204,222,0.5508578431372548) 0%, rgba(242,242,242,0.4500175070028011) 76%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dcccde",endColorstr="#f2f2f2",GradientType=1);
 }
 #clock {
     width: 25em;
@@ -27,6 +32,11 @@ body {
     -moz-border-radius: 30px;
     border-radius: 30px;
     border: 20px solid whitesmoke;
+
+    box-shadow: 2px 7px 11px 2px rgba(109,104,110,0.58);
+    -webkit-box-shadow: 2px 7px 11px 2px rgba(109,104,110,0.58);
+    -moz-box-shadow: 2px 7px 11px 2px rgba(109,104,110,0.58);
+
     background: rgb(192,192,192);
     background: -moz-radial-gradient(circle, rgba(192,192,192,0.4500175070028011) 41%, rgba(171,145,170,0.5508578431372548) 100%);
     background: -webkit-radial-gradient(circle, rgba(192,192,192,0.4500175070028011) 41%, rgba(171,145,170,0.5508578431372548) 100%);
@@ -39,21 +49,42 @@ body {
     flex-grow: 2;
 }
 #hours,
-#minutes,
-#separator {
-    font-size: 6em;
+#minutes {
+    font-size: 5.5em;
     font-family: 'alarm clock', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     color: rgba(255, 255, 255, 0.864);
 }
-#separator {
+#separator,
+#ampm{
+    
+    font-family: 'alarm clock', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.864);
+}
+#separator,
+#ampm {
     flex-grow: 1;
+}
+#separator{
+    font-size: 5em;
+    padding-left: 10px;
+}
+#ampm{
+    font-size: 2em;
 }
 /* .glass-effect{
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(5px);
 } */
+
+
+@media screen and (max-width: 400px) {
+    /* Your CSS rules here */
+  }
 
  

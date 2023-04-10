@@ -1,14 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-    const [hoursDiv, separatorDiv, minutesDiv] = document.querySelectorAll("#clock > div");
+    const [hoursDiv, separatorDiv, minutesDiv, ampmDiv] = document.querySelectorAll("#clock > div");
 
     const now = new Date();
 
     const hours = now.getHours().toString().padStart(2, '0');
     const minutes = now.getMinutes().toString().padStart(2, '0');
+
   
     hoursDiv.innerHTML = hours;
     minutesDiv.innerHTML = minutes;
+    ampmDiv.innerHTML = hours >= 12 ? 'PM' : 'AM';
 
     /**
      * Make separatorDiv " : " blink every second

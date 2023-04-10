@@ -2,7 +2,7 @@
 
 ## Digital clock
 
-![screenshot](./digital-clock/dclk.png)
+![screenshot](./digital-clock/digitclck.png)
 
 - date object, padStart() method :
 

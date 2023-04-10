@@ -6,10 +6,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const hours = now.getHours();
     const minutes = now.getMinutes().toString().padStart(2, '0');
-    
-    // Convert to 12-hour format and add leading zero if necessary
-    const hours12 = hours % 12 || 12;
 
+    /**
+     * Convert to 12-hour format (01 PM pour 13H)
+     * --> Returns 03h PM instead of 15h (15%12 = 3) or 12 instead of 0 for 12%12. 
+     * --> the modulo operation on a number n that is less than the divisor simply returns n
+     */
+    const hours12 = hours % 12 || 12; 
     hoursDiv.innerHTML = hours12.toString().padStart(2, '0');
     minutesDiv.innerHTML = minutes;
     ampmDiv.innerHTML = hours >= 12 ? 'PM' : 'AM';

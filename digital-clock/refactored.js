@@ -10,19 +10,18 @@ document.addEventListener("DOMContentLoaded", function() {
     hoursDiv.innerHTML = hours;
     minutesDiv.innerHTML = minutes;
 
-
-
-    // Make separatorDiv " : " blink every second
-
-    // Set an initial value for the visibility of the separator
-    let separatorVisible = true;
+    /**
+     * Make separatorDiv " : " blink every second
+     * 
+     * The function toggles the value of separatorVisible between true and false 
+     * by using the logical NOT operator (!) -> toggle classes each second
+     * 
+     */
+    let separatorVisible = true; // Set an initial value for the visibility of the separator
     
-    setInterval(() => {   // Create a timer that runs every second
-        
+    setInterval(() => { 
         separatorVisible = !separatorVisible; // Toggle the visibility of the separator
-  
-        // Set the visibility of the separator
-        separatorDiv.style.visibility = separatorVisible ? "visible" : "hidden";
+        separatorDiv.style.visibility = separatorVisible ? "visible" : "hidden";// Set the visibility of the separator
     }, 1000);
     
   });

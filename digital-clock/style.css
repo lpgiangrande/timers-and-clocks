@@ -5,38 +5,52 @@
     margin: 0;
     padding: 0;
 }
-
 body {
-    border: 4px solid pink; /* debug */
+    /* border: 4px solid pink; debug */
     min-width: 100vw;
     min-height: 100vh;
     display: flex;
     align-items: center; /* center child element vertically */
     justify-content: center; /* center child element horizontally */
+    font-size: 1em;
 }
-
-#clock{
-    border: 2px solid green; /* debug */
-    width : 400px;
-    height: 200px;
+#clock {
+    width: 25em;
+    height: 12.5em;
+    min-width: 6.25em;
+    min-height: 3.125em;
+    font-size: 16px;
     display: flex;
     flex-direction: row;
+    padding: 1.563em;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    border: 20px solid whitesmoke;
+    background-image: url(./bgimg.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
-
-#hours, #minutes {
-    border: 2px solid cyan; /* debug */
-    /* width : 45%; */
-    flex-grow: 3;
-    height: 100%;
+#hours,
+#minutes {
+    flex-grow: 2;
 }
-#hours, #minutes, #separator{
-    font-size: 50px;
+#hours,
+#minutes,
+#separator {
+    font-size: 6em;
     font-family: 'alarm clock', sans-serif;
     display: flex;
-    align-items: center; 
-    justify-content: center; 
-    color: black;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
 }
-#separator{
+#separator {
     flex-grow: 1;
 }
+/* .glass-effect{
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+} */
+
+ 

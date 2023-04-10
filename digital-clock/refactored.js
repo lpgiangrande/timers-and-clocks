@@ -17,11 +17,14 @@ document.addEventListener("DOMContentLoaded", function() {
      * by using the logical NOT operator (!) -> toggle classes each second
      * 
      */
-    let separatorVisible = true; // Set an initial value for the visibility of the separator
+    function blink() {
+        let separatorVisible = true; // Set an initial value for the visibility of the separator
     
-    setInterval(() => { 
-        separatorVisible = !separatorVisible; // Toggle the visibility of the separator
-        separatorDiv.style.visibility = separatorVisible ? "visible" : "hidden";// Set the visibility of the separator
-    }, 1000);
+        setInterval(() => { 
+            separatorVisible = !separatorVisible; // Toggle the visibility of the separator
+            separatorDiv.style.visibility = separatorVisible ? "visible" : "hidden"; // Set the visibility of the separator
+        }, 1000);
+    }
+    blink();
     
   });

@@ -1,28 +1,26 @@
+/**
+ * This file is an event that fires when the page loads. 
+ * It retrieves the Date() object and uses it to fill HTML DIVs to create a simple digital clock.
+ * 
+ * The hours are converted to the 12-hour clock system, and a leading 0 is added when necessary (format: 00h:00mn).
+ * AM or PM is added using the % operator on the const hours.
+ * We make the " : " blink to represents seconds
+ */
+
 document.addEventListener("DOMContentLoaded", function() {
 
     const [hoursDiv, separatorDiv, minutesDiv, ampmDiv] = document.querySelectorAll("#clock > div");
-
     const now = new Date();
-
-    const hours = now.getHours();
+    let hours = now.getHours();
+    hours = hours % 12 || 12;  // Returns 03h PM instead of 15h (15%12 = 3) or 12 instead of 0 for 12%12 or n. 
     const minutes = now.getMinutes();
 
-    /**
-     * Convert a single digit into a string and add a zero before
-     * @param {number} n a digit between 0 and 9
-     * @returns {string} 01 instead of 1
-     */
     function addLeadingZero(n){
         return n.toString().padStart(2, '0');
     }
 
-    /**
-     * Convert to 12-hour format (01 PM pour 13h)
-     * --> Returns 03h PM instead of 15h (15%12 = 3) or 12 instead of 0 for 12%12. 
-     * --> the modulo operation on a number n that is less than the divisor simply returns n
-     */
-    const hours12 = hours % 12 || 12; 
-    hoursDiv.innerHTML = addLeadingZero(hours12);
+
+    hoursDiv.innerHTML = addLeadingZero(hours);
     minutesDiv.innerHTML = addLeadingZero(minutes);
     ampmDiv.innerHTML = hours >= 12 ? 'PM' : 'AM';
     

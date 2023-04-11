@@ -4,13 +4,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const now = new Date();
 
-    const hours = now.getHours().toString().padStart(2, '0');
+    const hours = now.getHours();
     const minutes = now.getMinutes().toString().padStart(2, '0');
+    
+    // Convert to 12-hour format and add leading zero if necessary
+    const hours12 = hours % 12 || 12;
 
-  
-    hoursDiv.innerHTML = hours;
+    hoursDiv.innerHTML = hours12.toString().padStart(2, '0');
     minutesDiv.innerHTML = minutes;
     ampmDiv.innerHTML = hours >= 12 ? 'PM' : 'AM';
+    
 
     /**
      * Make separatorDiv " : " blink every second

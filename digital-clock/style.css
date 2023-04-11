@@ -16,7 +16,6 @@ body {
     display: flex;
     align-items: center; /* center child element vertically */
     justify-content: center; /* center child element horizontally */
-    font-size: 1em;
     background: rgb(220,204,222);
     background: -moz-linear-gradient(199deg, rgba(220,204,222,0.5508578431372548) 0%, rgba(242,242,242,0.4500175070028011) 76%);
     background: -webkit-linear-gradient(199deg, rgba(220,204,222,0.5508578431372548) 0%, rgba(242,242,242,0.4500175070028011) 76%);

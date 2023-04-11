@@ -1,10 +1,14 @@
 @import url('https://fonts.cdnfonts.com/css/alarm-clock');
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100;200;300;400;500;600;700&display=swap');
 
 :root {
-    --magenta: rgb(196, 25, 196);
-    --deep-purple : rgb(81, 0, 90);
-    --greyish-mauve: rgb(196, 182, 196);
     --digital-font: 'alarm clock', sans-serif;
+    --alt-font: 'Anuphan', sans-serif;
+    --bg-color: #edede9;
+    --darker-tone: #d6ccc2;
+    --light-tone-muted: #e3d5ca;
+    --medium-tone: #d5bdaf;
+    --dark: #a19e9c;
   }
 
 *, 
@@ -22,45 +26,58 @@ body {
     display: flex;
     align-items: center; /* center child element vertically */
     justify-content: center; /* center child element horizontally */
-    background: rgb(220,204,222);
-    background: -moz-linear-gradient(199deg, rgba(220,204,222,0.5508578431372548) 0%, rgba(242,242,242,0.4500175070028011) 76%);
-    background: -webkit-linear-gradient(199deg, rgba(220,204,222,0.5508578431372548) 0%, rgba(242,242,242,0.4500175070028011) 76%);
-    background: linear-gradient(199deg, rgba(220,204,222,0.5508578431372548) 0%, rgba(242,242,242,0.4500175070028011) 76%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#dcccde",endColorstr="#f2f2f2",GradientType=1);
+    background-color: var(--bg-color);
 }
 .timer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 12px solid var(--darker-tone);
+    border-radius: 30px;
+    padding: 1.25rem;
+    width: 400px;
+    background-color: var(--light-tone-muted);
   }
 
   .time-display {
     font-size: 6rem;
     font-weight: bold;
-    margin-bottom: 1rem;
-    color: var(--magenta);
-    font-family: var(--digital-font);
-
+    margin-bottom: 2rem;
+    color: var(--bg-color);
+    font-family: var(--alt-font);
+    font-weight: 600;
+    padding-top: 2rem;
   }
   button {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    padding: 1rem;
     margin: 0.5rem;
     /* round button */
-    width: 80px; 
-    height: 80px;
+    width: 70px; 
+    height: 70px;
     border-radius: 50%;
-    color: var(--deep-purple);
-    border-color: var(--deep-purple);
-    background-color: transparent;
+    color: var(--bg-color);
+    border-color: var(--light-tone);
+    /* background-color: transparent; */
+    background-color: var(--darker-tone);
     cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--alt-font);
+    font-weight: 400;
+  }
+  button:hover{
+   background-color: var(--light-tone);
+   /* font-weight: bold; */
   }
 
   p{
     padding-top: 100px;
-    font-size: 0.5rem;
+    font-size: 0.7rem;
+    color: var(--bg-color);
+    font-family: var(--alt-font);
+    font-weight: 400;
   }
   a{
-    color: var(--deep-purple);
+    color: var(--light-tone);
   }

@@ -17,6 +17,16 @@
                 <div id="ampm"></div>
             </div>
         </div>
+
+        <form id="alarm">
+            <label for="alarm-hours">Hours:</label>
+            <input type="number" id="alarm-hours" min="1" max="12">
+            <label for="alarm-minutes">Minutes:</label>
+            <input type="number" id="alarm-minutes" min="0" max="59">
+        </form>
+        
+        <audio id="alarm-sound" src="alarm.mp3"></audio>
+        
         <script src="refactored.js"></script>
     </body>
 </html>

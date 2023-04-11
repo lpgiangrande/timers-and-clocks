@@ -13,6 +13,6 @@ console.log(str1.padStart(2, "0"));
 // Expected output: "05" -> string length : 2, add 0 before
 ```
 
-## Alarm clock :
+## Pomodoro timer :
 
--
+Live site [timer](https://pomodoro-ed9de3.netlify.app/)

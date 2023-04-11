@@ -1,12 +1,10 @@
 /**
- * This file is an event that fires when the page loads. 
- * It retrieves the Date() object and uses it to fill HTML DIVs to create a simple digital clock.
+ * DIGITAL CLOCK
  * 
- * The hours are converted to the 12-hour clock system, and a leading 0 is added when necessary (format: 00h:00mn).
- * AM or PM is added using the % operator on the const hours.
- * We make the " : " blink to represents seconds
- * 
- * Add the date 
+ * - It retrieves the Date() object and uses it to fill HTML DIVs to create a simple digital clock.
+ * - AM or PM is added using the % operator on the const hours.
+ * - We make the " : " blink to represents seconds
+ * - Displays YY MM DD
  */
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -16,11 +14,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const now = new Date();
     const currentDate = new Date();
     let hours = now.getHours();
-    hours = hours % 12 || 12;  // Returns 03h PM instead of 15h (15%12 = 3) or 12 instead of 0 for 12%12 or n. 
     const minutes = now.getMinutes();
     const year = currentDate.getFullYear();
     const month = currentDate.toLocaleString('en-US', { month: 'long' });
     const day = currentDate.getDate();
+
+
+    function addLeadingZero(n){
+        return n.toString().padStart(2, '0');
+    }
 
     let daySuffix = 'th';
     if (day === 1 || day === 21 || day === 31) {
@@ -31,14 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
         daySuffix = 'rd';
     }
 
-    function addLeadingZero(n){
-        return n.toString().padStart(2, '0');
-    }
 
-
-    hoursDiv.innerHTML = addLeadingZero(hours);
+    hoursDiv.innerHTML = addLeadingZero(hours % 12 || 12); // hours format : return 12 if %0 or 3 for 15h, etc...
     minutesDiv.innerHTML = addLeadingZero(minutes);
-    ampmDiv.innerHTML = hours >= 12 ? 'PM' : 'AM';
+    ampmDiv.innerHTML = hours < 12 ? 'AM' : 'PM';
     dateDiv.innerHTML = `${year}, ${month.toUpperCase()} ${day}${daySuffix.toLowerCase()}`;
 
 

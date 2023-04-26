@@ -4,11 +4,11 @@
 :root {
   --digital-font: 'alarm clock', sans-serif;
   --alt-font: 'Anuphan', sans-serif;
-  --bg: #C5DECD;
-  --timer-bg: #E5D4C0;
-  --bright-green: #A1E8CC;
-  --pink: #FAC9B8;
-  --texts: #495159;
+  --bg: #d7e4db;
+  --timer-bg: #C5DECD;
+  --bright-color: #A1E8CC;
+  --bright-highlight: #FAC9B8;
+  --texts: #101935;
   --texts-rgb: 73, 81, 89;
 }
 *, 
@@ -26,6 +26,7 @@ body {
   display: flex;
   align-items: center; /* center child element vertically */
   justify-content: center; /* center child element horizontally */
+  flex-direction: column;
   background-color: var(--bg);
 }
 p, a, button{
@@ -40,13 +41,13 @@ p, a, button{
   border-radius: 30px;
   padding: 1.25rem;
   width: 400px;
-  border: 12px solid var(--bright-green);
+  border: 12px solid var(--bright-color);
   background-color: var(--timer-bg);
   box-shadow: 0 8px 16px rgba(var(--texts-rgb), 0.3);
 }
 .time-display {
   font-family: var(--digital-font);
-  color: var(--bright-green);
+  color: var(--bright-highlight);
   font-size: 6rem;
   font-weight: 600;
   margin-bottom: 2rem;
@@ -64,7 +65,7 @@ button {
   box-shadow: 0 4px 8px rgba(var(--texts-rgb), 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   margin-bottom: 15px;
-  background: linear-gradient(90deg, var(--bright-green) 0%, var(--pink) 100%);
+  background: linear-gradient(90deg, var(--bright-color) 20%, var(--bright-highlight) 100%);
   cursor: pointer;
 }
 button:hover {
@@ -76,3 +77,6 @@ p{
   font-size: 0.7rem;
   font-weight: 400;
 }
+/* #button-theme{
+  margin-top: 50px;
+} */

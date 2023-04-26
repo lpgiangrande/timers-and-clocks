@@ -16,4 +16,5 @@ console.log(str1.padStart(2, "0"));
 ## Pomodoro timer :
 
 Live site [timer](https://lpgiangrande.github.io/pomodoro/)
+
 ![screenshot](./pomodoro-timer/assets/pomodorotimer.png)
